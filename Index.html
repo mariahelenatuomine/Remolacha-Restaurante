@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remolacha - Restaurante</title>
+  <link rel="stylesheet" href="RemolachaTyyli.css">
+
+</head>
+<body>
+  <!-- Taustakuvakaruselli -->
+  <div class="tausta-slider">
+    <div class="slide active" style="background-image: url('slider1.jpg');"></div>
+    <div class="slide" style="background-image: url('slider2.jpg');"></div>
+    <div class="slide" style="background-image: url('joulupoyta.jpg');"></div>
+    <div class="slide" style="background-image: url('pasta.jpg');"></div>
+    <div class="slide" style="background-image: url('appelsiini.jpg');"></div>
+  </div>
+
+  <!-- Yläpalkki -->
+  <header class="ylapalkki">
+    <img src="RemolachaLogo.png" alt="Remolacha Ravintola Logo" class="logo">
+   <h1>REMOLACHA - RESTAURANTE</h1>
+    <nav class="valikko">
+      <button class="dropbtn">Valikko</button>
+      <div class="dropdown-content">
+        <a href="Remolacha.html">Etusivu</a>
+        <a href="VaraaPoyta.html">Varaa Pöytä</a>
+        <a href="VanhatMenut.html">Vanhat Menut</a>
+        <a href="Yhteystiedot.html">Yhteystiedot</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sisältö -->
+  <main>
+   
+    <h2>Vegaanista kotiruokaa valmistettu kahden siskon, rakkauden ja punajuurien voimalla ❤️</h2>
+    <p>Kaikki alkoi joulupöydästä ja pussillisesta punajuuria. Maria sai tehtäväkseen tuoda punajuuria ja toi niitä reilusti yli tarpeen. Kolminkertaisesti.<br>
+    Edessä oli valinta: heittääkö ylimääräiset pois vai keksiäkö niille uusi elämä?<br>
+    Siskokset valitsivat luovuuden. Siitä syntyi Remolacha, intohimolla rakennettu konsepti, joka yhdistää makuja, tarinoita ja yllätyksiä.</p>
+    <hr>
+  </main>
+  <!-- Karusellin JavaScript -->
+  <script>
+    let slides = document.querySelectorAll('.slide');
+    let current = 0;
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+    setInterval(showNextSlide, 5000);
+  </script>
+  <footer>
+    <strong>Remolacha Ravintola</strong><br>
+    Punajuurikatu 5, Helsinki<br>
+    Avoinna: Ti–La klo 17–22<br>
+    &copy; Maria<br>
+    <em>"Rakkaudella punajuurista – tervetuloa pöytään."</em>
+</footer>
+</body>
+</html>
